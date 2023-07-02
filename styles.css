@@ -1,0 +1,242 @@
+* {
+  font-family: "Bai Jamjuree", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  list-style: none;
+  text-decoration: none;
+  text-align: center;
+}
+
+:root {
+  --p-body-color: hsl(201, 11%, 66%);
+  --p-footer-color: hsl(201, 11%, 66%);
+  --body-fs-: 18px;
+  --hover-color: hsl(171, 66%, 44%);
+}
+
+body {
+  background-image: url(images/bg-header-desktop.png);
+  background-repeat: no-repeat;
+}
+header {
+  margin: 100px auto;
+  opacity: 0.7;
+}
+section {
+  margin: 100px auto;
+}
+
+.description {
+  max-width: 650px;
+  margin: 30px auto;
+}
+p {
+  font-size: 14px;
+  color: var(--p-body-color);
+  font-weight: 400;
+}
+h2{
+    font-size: 30px;
+    font-weight: 600;
+}
+h3{
+    font-size: 25px;
+    font-weight: 600;
+}
+
+/*header*/
+header a img {
+  color: var(--hover-color);
+  margin-bottom: 20px;
+}
+.description p {
+  margin-top: 18px;
+}
+.links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+.links a {
+  padding: 10px;
+  border-radius: 25px;
+  color: white;
+}
+.links > .green-link {
+  background-color: var(--hover-color);
+}
+.links > .purple-link {
+  background-color: hsl(233, 100%, 69%);
+}
+.links > .green-link:hover {
+    opacity: 0.7; 
+}
+  .links > .purple-link:hover {
+    background-color: hsl(233, 100%, 69%);
+    opacity: 0.7;    }
+/*section 1*/
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0rem;
+  margin-top: 3rem;
+}
+.box .img {
+  max-width: 600px;
+  margin-left: -100px;
+}
+.box .img img {
+  width: 100%;
+  height: auto;
+}
+.box .content {
+  max-width: 350px;
+  margin-right: 125px;
+}
+.box .content > div {
+  margin-bottom: 2.5rem;
+}
+.box .content > div h3,
+.box .content > div p {
+  text-align: left;
+  line-height: 2rem;
+}
+.box .content > div p {
+    font-size: 14px;
+  }
+
+  /*section 2*/
+  .section-2 .img{
+    max-width: 800px;
+    margin: 100px auto;
+  }
+  .section-2 .img img{
+    width: 100%;
+  }
+
+  /*section 3*/
+  .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    gap: 2rem;
+    margin: 80px 100px;
+  }
+  .container img{
+    padding: 20px;
+  }
+  .container h3{
+    margin-bottom: 1rem;
+  }
+  .container p{
+    margin-bottom: 3rem;
+    font-size: 12px;
+  }
+  /*section 4*/
+  .logos{
+    margin: 150px 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+  }
+  .logos img{
+    width: 100%;
+    max-width: 150px;
+  }
+   /*section 5*/
+   .section-5{
+    margin: 170px auto;
+   }
+
+  /*footer*/
+  footer{
+    color: var(--p-footer-color);
+    background-color: hsla(201, 11%, 66%, 0.4);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px;
+  }
+
+  footer .foot-text a img{
+    width: 50px;
+    height: 50px;
+  }
+  .foot-text{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 3rem;
+  }
+  .foot-text li{
+    text-align: left;
+  }
+  .foot-text div li a{
+    color: var(--p-footer-color);
+    font-weight: 400;
+  }
+  .foot-text div li a:hover{
+    color: var(--hover-color);
+  }
+  .foot-icons > i{
+    padding: 0.1rem;
+    font-size: 40px;
+    background: transparent;
+    }
+  .foot-icons i:hover{
+    cursor: pointer;
+    color: var(--hover-color);
+  }
+  .mobile-pad{
+    margin-inline: auto;
+    max-width: 1440px;
+  }
+
+
+  /*media queries*/
+  @media (max-width: 375px){
+    .mobile-pad{
+      margin-inline: 35px;
+    }
+    .box .content{
+      margin: 0;
+    }
+    .box .content > div >h3, .box .content > div > p{
+      text-align: center;
+    }
+    .box .img{
+      margin: auto;
+    }
+    .section-3 .container{
+      margin-inline: auto;
+    }
+    .logos img{
+      margin-inline: auto;
+    }
+    footer{
+      flex-direction: column;
+      justify-content: center;
+    }
+    footer .foot-text{
+      flex-direction: column;
+      justify-content: center;
+      gap: 0;
+      padding: 20px;
+    }
+    footer .foot-text div > li{
+      text-align: center;
+      margin-top: 1.5rem;
+    }
+    footer .foot-text div{
+      margin-bottom: 0rem;
+    }
+  }
